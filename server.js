@@ -1,10 +1,11 @@
 const path = require('path');
-const https = require('https');
 require('dotenv').config({ path: path.join(__dirname, 'config.env') });
-require('colors').config({ path: path.join(__dirname, 'colors.js') });
+require('colors').setTheme(require('./colors'));
 const express = require('express');
 const app = express();
 
+const router = require('./util/router');
+app.use('/', router);
 app.use(express.json());
 
-https.createServer({}, app).listen(process.env.PORT, console.log(`Server listening on port ${process.env.port}`.success));
+app.listen(process.env.PORT, console.log(`Server listening on port ${process.env.PORT}`.success));

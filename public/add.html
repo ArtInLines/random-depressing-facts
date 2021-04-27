@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/assets/style.css" />
+		<link rel="stylesheet" href="/assets/add.css" />
+		<title>Add Facts</title>
+	</head>
+	<body>
+		<div class="add-form" id="fact-form">
+			<!-- Title -->
+			<label for="title" id="title-label">Title</label>
+			<input type="text" name="title" id="title-input" />
+
+			<!-- Text -->
+			<label for="text" id="text-label">Summary / Article</label>
+			<textarea name="text" id="text-input" cols="30" rows="10"></textarea>
+
+			<!-- Sources -->
+			<label for="sources" id="sources-label">sources</label>
+			<input type="text" name="sources" id="sources-input" />
+
+			<!-- Notes -->
+			<div id="notes-container">
+				<!-- Inputs for notes will be created dynamically -->
+			</div>
+
+			<!-- Tags -->
+			<label for="tags" id="tags-label">tags</label>
+			<select name="tags" id="tags-select">
+				<option value=""></option>
+			</select>
+
+			<!-- Release Date -->
+			<label for="date" id="date-label">Release Date</label>
+			<input type="date" name="date" id="date-input" />
+
+			<!-- Add Button -->
+			<button type="submit" class="btn, add-btn" id="add-btn">Add Fact</button>
+		</div>
+
+		<div class="add-form" id="tag-form" style="display: none">
+			<label for="tag-value" id="tag-value-label">Tag Value</label>
+			<input type="text" name="tag-value" id="tag-value-input" />
+
+			<label for="tag-name" id="tag-name-label">Tag Name</label>
+			<input type="text" name="tag-name" id="tag-name-input" />
+
+			<button type="submit" class="btn, add-btn" id="add-tag-btn">Add Tag</button>
+		</div>
+
+		<script src="/assets/add.js"></script>
+	</body>
+</html>
